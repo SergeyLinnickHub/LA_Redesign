@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="UI Theme for Limo Anywhere Admin System">
+	<meta name="author" content="Gentle Code">
+	<title>LA Admim Theme</title>
+	<!-- <link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144"> -->
+	<!-- <link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114"> -->
+	<!-- <link href="img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72"> -->
+	<!-- <link href="img/favicon.57x57.png" rel="apple-touch-icon" type="image/png"> -->
+	<!-- <link href="img/favicon.png" rel="icon" type="image/png"> -->
+	<!-- <link href="img/favicon.ico" rel="shortcut icon"> -->
+	<!-- Google font OpenSans -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<link href="https://summernote.org/vendors/summernote/dist/summernote-bs4.css" rel="stylesheet">
+	<!-- LA Admin Theme core css -->
+	<link href="css/main.css" rel="stylesheet">
+</head>
+<body class="with-side-menu">
+
+	<header class="site-header navbar fixed-top navbar-expand-lg">
+		<a class="navbar-brand" href="index.html" title="Limo Anywhere - a better way to run your business"><img width="48" height="40" src="img/logo-LA-sm-white.png" alt="Limo Anywhere"></a>
+	
+		<div class="sidebar-hamburger-holder mr-auto">
+			<button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
+				<i class="i">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</i>
+			</button>
+		</div>
+	
+		<div class="mobile-menu-right-overlay modal-backdrop show"></div>
+		<div class="navbar-collapse site-header-collapsed" id="mainMenu">
+			<!-- Main menu -->
+			<ul class="main-menu navbar-nav mr-auto ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-briefcase fa-fw"></i>Quotes</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="reservations.html"><i class="fa fa-calendar-check-o fa-fw"></i>Reservations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-car fa-fw"></i>Dispatch</a>
+				</li>
+				<li class="nav-item d-none d-lg-block">
+					<a class="btn btn-primary" href="#">Rate Lookup</a>
+				</li>
+				<li class="nav-item dropdown d-none d-lg-block">
+					<a class="btn btn-primary dropdown-toggle" href="#" id="ddHeaderNewReservation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New Res</a>
+					<div class="dropdown-menu" aria-labelledby="ddHeaderNewReservation">
+						<a class="dropdown-item" href="#">Standard Reservation</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Quick Reservation</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">DA Net Farm-out</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-calendar fa-fw"></i>Calendar</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-usd fa-fw"></i>Settle</a>
+				</li>
+			</ul>
+			<!-- end Main menu -->
+	
+			<ul class="main-menu navbar-nav">
+				<!-- Search form -->
+				<li class="nav-item site-header-search-container">
+					<form class="site-header-search closed">
+						<input class="input-search form-control form-control-rounded" type="search" placeholder="Search" />
+						<button class="btn-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+						<div class="overlay"></div>
+					</form>
+				</li>
+				<!-- end Search form -->
+	
+				<!-- More menu -->
+				<li class="nav-item dropdown dropdown-opened-mobile">
+					<a class="nav-link dropdown-toggle" href="#?" id="ddHeaderMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+					<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="ddHeaderMore">
+						<li class="dropdown-item"><a class="nav-link" href="myOffice.html"><i class="fa fa-home fa-fw"></i>My Office</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="accounts.html"><i class="fa fa-user-plus fa-fw""></i>Accounts</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-share-alt fa-fw"></i>Network</a></li>
+						<li class="dropdown-divider"></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-download fa-fw"></i>Receivables</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-upload fa-fw"></i>Payables</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-line-chart fa-fw"></i>Reports</a></li>
+						<li class="dropdown-divider"></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-check-square fa-fw"></i>Memo</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-files-o fa-fw"></i>Files</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-wrench fa-fw"></i>Tools</a></li>
+					</ul>
+				</li>
+				<!-- end More menu -->
+			</ul>
+		</div>
+	
+		<!-- Buttons only mobile screen -->
+		<div class="ml-auto d-block d-lg-none">
+			<a class="btn btn-primary" href="#">Rate</a>
+			<div class="btn-group">
+				<a class="btn btn-primary dropdown-toggle" href="#" id="ddHeaderNewReservation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New Res</a>
+				<div class="dropdown-menu" aria-labelledby="ddHeaderNewReservation">
+					<a class="dropdown-item" href="#">Standard Reservation</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Quick Reservation</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">DA Net Farm-out</a>
+				</div>
+			</div>
+		</div>
+		<!-- end Buttons only mobile screen -->
+	
+		<!-- Admin menu -->
+		<ul class="main-menu navbar-nav main-menu-admin">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="ddUserMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-nostatic" aria-labelledby="ddUserMenu">
+					<a class="dropdown-item" href="#"><i class="fa fa-cog fa-fw"></i>Menu Customization</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-graduation-cap fa-fw"></i>Training</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-bar-chart fa-fw"></i>System Status</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-envelope fa-fw"></i>Email Notifications</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-question-circle fa-fw"></i>Support &amp; Feedback</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+				</div>
+			</li>
+		</ul>
+		<!-- end Admin menu -->
+	
+		<div class="sidebar-hamburger-holder">
+			<button id="show-hide-menu-mob" class="show-hide-menu-mob"><i class="fa fa-th"></i></button>
+		</div>
+	
+	</header>
+	<div class="mobile-menu-left-overlay modal-backdrop show"></div>
+	<nav class="side-menu">
+		<ul class="side-menu-list">
+			<li class="with-sub">
+				<span>Pages</span>
+				<ul>
+					<li><a href="index.html"><span class="lbl">Index</span></a></li>
+					<li><a href="accounts.html"><span class="lbl">Accounts</span></a></li>
+					<li><a href="blank.html"><span class="lbl">Blank</span></a></li>
+					<li><a href="iCalendar.html"><span class="lbl">ICalendar</span></a></li>
+					<li class=""><a href="myOffice.html"><span class="lbl">My Office</span></a></li>
+					<li class=""><a href="reservations.html"><span class="lbl">Reservations</span></a></li>
+					<li class=""><a href="reservation_with_submenu.html"><span class="lbl">Reservations (with submenu)</span></a></li>
+					<li class=""><a href="resScreen.html"><span class="lbl">Reservation Screen</span></a></li>
+					<li class=""><a href="scheduledMessaging.html"><span class="lbl">Scheduled Messaging</span></a></li>
+					<li class=""><a href="systemUsers.html"><span class="lbl">System Users</span></a></li>
+					<li class=""><a href="header2.html"><span class="lbl">Alternate Header</span></a></li>
+					<li class="with-sub">
+						<span>Messaging & Template Settings</span>
+						<ul>
+							<li class="with-sub">
+								<span class="lbl">Standart Settings</span>
+								<ul>
+									<li><a href="#?"><span class="lbl">Level 2</span></a></li>
+									<li><a href="#?"><span class="lbl">Level 2</span></a></li>
+								</ul>
+							</li>
+							<li><a href="emailReservationManifest.html"><span class="lbl">Email Res Manifest</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="with-sub">
+				<span>Components</span>
+				<ul>
+					<li><a href="alerts.html"><span class="lbl">Alerts</span></a></li>
+					<li><a href="badges.html"><span class="lbl">Badges</span></a></li>
+					<li><a href="buttons.html"><span class="lbl">Buttons</span></a></li>
+					<li><a href="cards.html"><span class="lbl">Cards</span></a></li>
+					<li><a href="forms.html"><span class="lbl">Forms</span></a></li>
+					<li><a href="modalPage.html"><span class="lbl">Modal page</span></a></li>
+					<li><a href="pagination.html"><span class="lbl">Pagination</span></a></li>
+					<li><a href="pickers.html"><span class="lbl">Pickers</span></a></li>
+					<li><a href="popovers.html"><span class="lbl">Popovers</span></a></li>
+					<li><a href="tables.html"><span class="lbl">Tables</span></a></li>
+					<li><a href="tabs.html"><span class="lbl">Tabs</span></a></li>
+					<li class="with-sub">
+						<span>Nested Menu</span>
+						<ul>
+							<li><a href="#?"><span class="lbl">Level 1</span></a></li>
+							<li class=""><a href="#?"><span class="lbl">Level 1</span></a></li>
+							<li class="with-sub">
+								<span class="lbl">Level 1</span>
+								<ul>
+									<li><a href="#?"><span class="lbl">Level 2</span></a></li>
+									<li><a href="#?"><span class="lbl">Level 2</span></a></li>
+									<li class="with-sub">
+										<span class="lbl">Level 2</span>
+										<ul>
+											<li><a href="#?"><span class="lbl">Level 3</span></a></li>
+											<li><a href="#?"><span class="lbl">Level 3</span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="page-content">
+		<div class="content-wrapper">
+			<header class="header-content">
+				<h1 class="header-content-title">Scheduled Messaging</h1>
+				<div class="header-content-controls">
+					<div class="btn-group">
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Add Template
+						</button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#">Email Template</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">SMS Template</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="page-content-inner">
+				<div class="sub-header-content">
+					<h2 class="sub-header-content-title">
+						Configuration Type:&nbsp;&nbsp;
+						<div class="nav d-inline-flex">
+							<div class="nav btn-group-toggle-custom">
+								<a class="btn btn-secondary active" data-toggle="tab" href="#configurationTypeEmail" role="tab" aria-controls="configurationTypeEmail">Email</a>
+								<a class="btn btn-secondary" data-toggle="tab" href="#configurationTypeSMS" role="tab" aria-controls="fax">SMS</a>
+							</div>
+						</div>
+					</h2>
+				</div>
+				<div class="tab-content">
+					<div class="tab-pane active" id="configurationTypeEmail" role="tabpanel">
+						<!-- Stored Email Template start-->
+						<div class="content-with-sidebar" style="display: none;">
+							<div class="sidebar-holder">
+								<div class="side-header-content">
+									<h3 class="entry-title">
+										Stored Email Template
+									</h3>
+									<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+										<label class="btn btn-outline-secondary active">
+											<input type="radio" name="storedEmailTemplate" id="storedEmailTemplateOption1" autocomplete="off" checked> Active
+										</label>
+										<label class="btn btn-outline-secondary">
+											<input type="radio" name="storedEmailTemplate" id="storedEmailTemplateOption2" autocomplete="off"> All
+										</label>
+									</div>
+								</div>
+								<div class="side-list-holder">
+									<ul class="list-group-with-controls list-group-striped">
+										<li class="list-group-item">
+											<a href="#">General Email Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Main Email Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#" class="text-danger">Test Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">General Email Template with longlong name</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 1</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 2</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 3</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 4</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 5</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 6</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 7</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<h3 class="entry-title">
+									Send Test Email
+								</h3>
+								<div class="alert alert-warning" role="alert">
+									<b>Atention:</b> Be sure to save the template before attempting to send a test message.
+								</div>
+								<div class="form-section">
+									<div class="form-group">
+										<label for="">Recipient`s Email</label>
+										<input type="email" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Conf or Invoice Number</label>
+										<input type="text" class="form-control">
+									</div>
+									<div class="text-right">
+										<button class="btn btn-primary">Send Email</button>
+									</div>
+								</div>
+							</div>
+							<div class="content-holder">
+								<div class="page-content-limited">
+									<h3 class="entry-title">
+										Add New Email Template
+									</h3>
+									<div class="form-group">
+										<label for="templateName">Template Name</label>
+										<input type="text" class="form-control" id="templateName" aria-describedby="templateName" placeholder="">
+									</div>
+									<div class="form-group">
+										<label for="emailType">Email Type</label>
+										<select name="" id="emailType" class="form-control auto">
+											<option value="trip">Trip</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="reservationStatus">Reservation Status</label>
+										<select name="" id="reservationStatus" class="form-control auto">
+											<option value="default">Click to select</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="tripType">Trip Type</label>
+										<select name="" id="tripType" class="form-control auto">
+											<option value="default">Click to select</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="emailClass">Email Class</label>
+										<select name="" id="emailClass" class="form-control auto">
+											<option value="">Customer</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="sendTo">Send to</label>
+										<select name="" id="sendTo" class="form-control auto">
+											<option value="">Click to select</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="attachForm">Attach Form</label>
+										<select name="" id="attachForm" class="form-control auto">
+											<option value="">Click to select</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="attachFiles">Attach Files</label> or <a href="#">Upload New File</a>
+										<select class="select2-multiple form-control" name="states[]" id="attachFiles" multiple="multiple">
+											<option value="car">car.jpg</option>
+											<option value="doc">template_email.doc</option>
+											<option value="lorem">lorem ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="whenToSend">When to Send</label>
+										<div class="custom-control custom-radio custom-control-with-form-row">
+											<input type="radio" id="whenStatusChanged" name="whenToSend" class="custom-control-input" checked>
+											<label class="custom-control-label" for="whenStatusChanged"></label>
+											<div class="form-row">
+												<div class="col-md">
+													<label class="control-label" for="whenStatusChanged2">When Status Changed to</label>
+												</div>
+												<div class="col-md">
+													<select name="" id="whenStatusChanged2" class="form-control auto">
+														<option value="default">Click to select</option>
+														<option value="">Lorem ipsum dolor sit amet</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="custom-control custom-radio custom-control-with-form-row">
+											<input type="radio" id="customRadio2" name="whenToSend" class="custom-control-input">
+											<label class="custom-control-label" for="customRadio2"></label>
+											<div class="form-row">
+												<div class="col-md">
+													<div class="input-group">
+														<input type="number" class="form-control" value="1" disabled>
+														<select name="" id="" class="form-control" disabled>
+															<option value="days">Day(s)</option>
+															<option value="weeks">Week(s)</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md">
+													<div class="input-group">
+														<select name="" id="" class="form-control" disabled>
+															<option value="before">before</option>
+														</select>
+														<div class="input-group-append">
+															<span class="input-group-text" id="">PU Time</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="dontSend">Do Not Send if Status is</label>
+										<select name="" id="dontSend" class="form-control">
+											<option value="">Click to select</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="d-block" for="">Allow Profile Level Setting Override</label>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label class="btn btn-outline-secondary active">
+												<input type="radio" name="allowProfileLevelSettingOverride" value="" autocomplete="off" checked=""> Yes
+											</label>
+											<label class="btn btn-outline-secondary" id="scrollDown">
+												<input type="radio" name="allowProfileLevelSettingOverride" value="" autocomplete="off">
+												No
+											</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="d-block" for="">Restrict Only to Selected Account/Affiliates</label>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label class="btn btn-outline-secondary active">
+												<input type="radio" name="restrictOnlyToSelectedAccount" value="" autocomplete="off" checked=""> Yes
+											</label>
+											<label class="btn btn-outline-secondary" id="scrollDown">
+												<input type="radio" name="restrictOnlyToSelectedAccount" value="" autocomplete="off">
+												No
+											</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="status">Status</label>
+										<select name="" id="status" class="form-control auto border-bold form-control-cls">
+											<option value="active"  data-class="form-control-success">Active</option>
+											<option value="active"  data-class="form-control-danger">Unactive</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="emailSubject">Email Subject</label>
+										<input type="text" class="form-control" id="emailSubject" aria-describedby="emailSubject" placeholder="">
+									</div>
+									<div class="form-group">
+										<label for="">Template Content</label>
+										<div class="summernote"></div>
+									</div>
+									<div class="text-right">
+										<input type="button" id="addTemplate" class="btn btn-lg btn-primary" disabled value="Add Template">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Stored Email Template end-->
+						<!-- NEW Email Template start-->
+						<div class="content-with-sidebar">
+							<div class="sidebar-holder">
+								<div class="side-header-content">
+									<h3 class="entry-title">
+										Stored Email Template
+									</h3>
+									<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+										<label class="btn btn-outline-secondary active">
+											<input type="radio" name="storedEmailTemplate" id="storedEmailTemplateOption1" autocomplete="off" checked> Active
+										</label>
+										<label class="btn btn-outline-secondary">
+											<input type="radio" name="storedEmailTemplate" id="storedEmailTemplateOption2" autocomplete="off"> All
+										</label>
+									</div>
+								</div>
+								<div class="side-list-holder">
+									<ul class="list-group-with-controls list-group-striped">
+										<li class="list-group-item">
+											<a href="#">General Email Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Main Email Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#" class="text-danger">Test Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">General Email Template with longlong name</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 1</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 2</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 3</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 4</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 5</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 6</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 7</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="content-holder">
+								<div class="page-content-limited">
+									<h3 class="entry-title">
+										Add New Email Template
+									</h3>
+									<div class="form-group">
+										<label for="templateName">Template Name</label>
+										<input type="text" class="form-control" id="templateName" aria-describedby="templateName" placeholder="Email Template Name">
+									</div>
+									<div class="form-group">
+										<label for="emailType" class="d-block">Email Type</label>
+										<div class="custom-control custom-radio d-inline-flex">
+											<input type="radio" id="tripEmailType" name="emailTypeNew" class="custom-control-input" checked>
+											<label class="custom-control-label" for="tripEmailType">Trip</label>
+										</div>
+										<div class="custom-control custom-radio d-inline-flex">
+											<input type="radio" id="invoiceEmailType" name="emailTypeNew" class="custom-control-input">
+											<label class="custom-control-label" for="invoiceEmailType">Invoice</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="reservationStatus" class="d-block">Reservation Status</label>
+										<div class="custom-control custom-checkbox d-inline-flex">
+											<input type="checkbox" class="custom-control-input" id="reservationStatusNew">
+											<label class="custom-control-label" for="reservationStatusNew">New/Live</label>
+										</div>
+										<div class="custom-control custom-checkbox d-inline-flex">
+											<input type="checkbox" class="custom-control-input" id="reservationStatusSettled">
+											<label class="custom-control-label" for="reservationStatusSettled">Settled</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="tripType" class="d-block">Trip Type</label>
+										<div class="custom-control custom-checkbox d-inline-flex">
+											<input type="checkbox" class="custom-control-input" id="tripTypeInHouse">
+											<label class="custom-control-label" for="tripTypeInHouse">In-House</label>
+										</div>
+										<div class="custom-control custom-checkbox d-inline-flex">
+											<input type="checkbox" class="custom-control-input" id="tripTypeFarmIn">
+											<label class="custom-control-label" for="tripTypeFarmIn">Farm-in</label>
+										</div>
+										<div class="custom-control custom-checkbox d-inline-flex">
+											<input type="checkbox" class="custom-control-input" id="tripTypeFarmOut">
+											<label class="custom-control-label" for="tripTypeFarmOut">Farm-out</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="emailClass" class="d-block">Email Class</label>
+										<div class="custom-control custom-radio d-inline-flex">
+											<input type="radio" id="emailClassCustomer" name="emailClass" class="custom-control-input" checked>
+											<label class="custom-control-label" for="emailClassCustomer">Customer</label>
+										</div>
+										<div class="custom-control custom-radio d-inline-flex">
+											<input type="radio" id="emailClassDriver" name="emailClass" class="custom-control-input">
+											<label class="custom-control-label" for="emailClassDriver">Driver</label>
+										</div>
+										<div class="custom-control custom-radio d-inline-flex">
+											<input type="radio" id="emailClassAffiliate" name="emailClass" class="custom-control-input">
+											<label class="custom-control-label" for="emailClassAffiliate">Affiliate</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="sendTo" class="d-block">Send to</label>
+										<div class="custom-control custom-checkbox d-inline-flex">
+											<input type="checkbox" class="custom-control-input" id="sendToBillContact">
+											<label class="custom-control-label" for="sendToBillContact">Billing Contact</label>
+										</div>
+										<div class="custom-control custom-checkbox d-inline-flex">
+											<input type="checkbox" class="custom-control-input" id="sendToPassenger">
+											<label class="custom-control-label" for="sendToPassenger">Passenger</label>
+										</div>
+										<div class="custom-control custom-checkbox d-inline-flex">
+											<input type="checkbox" class="custom-control-input" id="sendToBookContact">
+											<label class="custom-control-label" for="sendToBookContact">Booking Contact</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="attachForm">Attach Form</label>
+										<select name="" id="attachForm" class="form-control auto">
+											<option value="">Click to select</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="attachFiles">Attach Files</label> or <a href="#">Upload New File</a>
+										<select class="select2-multiple form-control" name="states[]" id="attachFiles" multiple="multiple">
+											<option value="car">car.jpg</option>
+											<option value="doc">template_email.doc</option>
+											<option value="lorem">lorem ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="whenToSend">When to Send</label>
+										<div class="custom-control custom-radio custom-control-with-form-row">
+											<input type="radio" id="whenStatusChanged" name="whenToSend" class="custom-control-input" checked>
+											<label class="custom-control-label" for="whenStatusChanged"></label>
+											<div class="form-row">
+												<div class="col-md">
+													<label class="control-label" for="whenStatusChanged2">When Status Changed to</label>
+												</div>
+												<div class="col-md">
+													<select name="" id="whenStatusChanged2" class="form-control auto">
+														<option value="default">Click to select</option>
+														<option value="">Lorem ipsum dolor sit amet</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="custom-control custom-radio custom-control-with-form-row">
+											<input type="radio" id="customRadio2" name="whenToSend" class="custom-control-input">
+											<label class="custom-control-label" for="customRadio2"></label>
+											<div class="form-row">
+												<div class="col-md">
+													<div class="input-group">
+														<input type="number" class="form-control" value="1" disabled>
+														<select name="" id="" class="form-control" disabled>
+															<option value="days">Day(s)</option>
+															<option value="weeks">Week(s)</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md">
+													<div class="input-group">
+														<select name="" id="" class="form-control" disabled>
+															<option value="before">before</option>
+														</select>
+														<div class="input-group-append">
+															<span class="input-group-text" id="">PU Time</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="dontSend">Do Not Send if Status is</label>
+										<select name="" id="dontSend" class="form-control">
+											<option value="">Click to select</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="d-block" for="">Allow Profile Level Setting Override</label>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label class="btn btn-outline-secondary active">
+												<input type="radio" name="allowProfileLevelSettingOverride" value="" autocomplete="off" checked=""> Yes
+											</label>
+											<label class="btn btn-outline-secondary" id="scrollDown">
+												<input type="radio" name="allowProfileLevelSettingOverride" value="" autocomplete="off">
+												No
+											</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="d-block" for="">Restrict Only to Selected Account/Affiliates</label>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label class="btn btn-outline-secondary active">
+												<input type="radio" name="restrictOnlyToSelectedAccount" value="" autocomplete="off" checked=""> Yes
+											</label>
+											<label class="btn btn-outline-secondary" id="scrollDown">
+												<input type="radio" name="restrictOnlyToSelectedAccount" value="" autocomplete="off">
+												No
+											</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="status">Status</label>
+										<select name="" id="status" class="form-control auto border-bold form-control-cls">
+											<option value="active"  data-class="form-control-success">Active</option>
+											<option value="active"  data-class="form-control-danger">Unactive</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="emailSubject">Email Subject</label>
+										<input type="text" class="form-control" id="emailSubject" aria-describedby="emailSubject" placeholder="">
+									</div>
+									<div class="form-group">
+										<label for="">Template Content</label>
+										<div class="summernote"></div>
+									</div>
+									<div class="text-right">
+										<input type="button" id="addTemplate" class="btn btn-lg btn-primary" disabled value="Add Template">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- NEW Email Template end-->
+					</div>
+					<div class="tab-pane" id="configurationTypeSMS" role="tabpanel">
+						<div class="content-with-sidebar">
+							<div class="sidebar-holder">
+								<div class="side-header-content">
+									<h3 class="entry-title">
+										Stored SMS Template
+									</h3>
+									<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+										<label class="btn btn-outline-secondary active">
+											<input type="radio" name="storedEmailTemplate" id="storedEmailTemplateOption1" autocomplete="off" checked> Active
+										</label>
+										<label class="btn btn-outline-secondary">
+											<input type="radio" name="storedEmailTemplate" id="storedEmailTemplateOption2" autocomplete="off"> All
+										</label>
+									</div>
+								</div>
+								<div class="side-list-holder">
+									<ul class="list-group-with-controls list-group-striped">
+										<li class="list-group-item">
+											<a href="#">Add New SMS Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Main Email Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#" class="text-danger">Test Template</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">General Email Template with longlong name</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 1</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 2</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 3</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 4</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 5</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 6</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a href="#">Lorem Ipsum 7</a>
+											<div class="list-controls">
+												<div class="dropdown dropleft">
+													<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" href="#" title="Click to edit"><i class="fa fa-pencil" aria-hidden="true"></i> <span class="i">Edit</span></a>
+														<a class="dropdown-item" href="#" title="Click to delete"><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="i">Delete</span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="content-holder">
+								<div class="page-content-limited">
+									<h3 class="entry-title">
+										Add New Email Template
+									</h3>
+									<div class="form-group">
+										<label for="SMStemplateName">Template Name</label>
+										<input type="text" class="form-control" id="SMStemplateName" aria-describedby="templateName" placeholder="">
+									</div>
+									<div class="form-group">
+										<label for="SMStype">SMS Type</label>
+										<select name="" id="SMStype" class="form-control auto">
+											<option value="trip">Trip</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="SMSreservationStatus">Reservation Status</label>
+										<select name="" id="SMSreservationStatus" class="form-control auto">
+											<option value="default">Click to select</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="SMStripType">Trip Type</label>
+										<select name="" id="SMStripType" class="form-control auto">
+											<option value="default">Click to select</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="SMSemailClass">SMS Class</label>
+										<select name="" id="SMSemailClass" class="form-control auto">
+											<option value="">Customer</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="SMSsendTo">Send to</label>
+										<select name="" id="SMSsendTo" class="form-control auto">
+											<option value="">Click to select</option>
+											<option value="">Lorem Ipsum</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="SMSwhenToSend">When to Send</label>
+										<div class="custom-control custom-radio custom-control-with-form-row">
+											<input type="radio" id="SMSwhenStatusChanged" name="SMSwhenToSend" class="custom-control-input" checked>
+											<label class="custom-control-label" for="SMSwhenStatusChanged"></label>
+											<div class="form-row">
+												<div class="col-md">
+													<label class="control-label" for="SMSwhenStatusChanged2">When Status Changed to</label>
+												</div>
+												<div class="col-md">
+													<select name="" id="SMSwhenStatusChanged2" class="form-control auto">
+														<option value="default">Click to select</option>
+														<option value="">Lorem ipsum dolor sit amet</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="custom-control custom-radio custom-control-with-form-row">
+											<input type="radio" id="SMScustomRadio2" name="SMSwhenToSend" class="custom-control-input">
+											<label class="custom-control-label" for="SMScustomRadio2"></label>
+											<div class="form-row">
+												<div class="col-md">
+													<div class="input-group">
+														<input type="number" class="form-control" value="1" disabled>
+														<select name="" id="" class="form-control" disabled>
+															<option value="days">Day(s)</option>
+															<option value="weeks">Week(s)</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md">
+													<div class="input-group">
+														<select name="" id="" class="form-control" disabled>
+															<option value="before">before</option>
+														</select>
+														<div class="input-group-append">
+															<span class="input-group-text" id="">PU Time</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="SMSdontSend">Do Not Send if Status is</label>
+										<select name="" id="SMSdontSend" class="form-control">
+											<option value="">Click to select</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="d-block" for="">Allow Profile Level Setting Override</label>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label class="btn btn-outline-secondary active">
+												<input type="radio" name="SMSallowProfileLevelSettingOverride" value="" autocomplete="off" checked=""> Yes
+											</label>
+											<label class="btn btn-outline-secondary" id="scrollDown">
+												<input type="radio" name="SMSallowProfileLevelSettingOverride" value="" autocomplete="off">
+												No
+											</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="d-block" for="">Restrict Only to Selected Account/Affiliates</label>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label class="btn btn-outline-secondary active">
+												<input type="radio" name="SMSrestrictOnlyToSelectedAccount" value="" autocomplete="off" checked=""> Yes
+											</label>
+											<label class="btn btn-outline-secondary" id="scrollDown">
+												<input type="radio" name="SMSrestrictOnlyToSelectedAccount" value="" autocomplete="off">
+												No
+											</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="SMSstatus">Status</label>
+										<select name="" id="SMSstatus" class="form-control auto border-bold form-control-cls">
+											<option value="active"  data-class="form-control-success">Active</option>
+											<option value="active"  data-class="form-control-danger">Unactive</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="SMSemailSubject">Email Subject</label>
+										<input type="text" class="form-control" id="SMSemailSubject" aria-describedby="emailSubject" placeholder="">
+									</div>
+									<div class="form-group">
+										<label for="">Template Content</label>
+										<div class="summernote"></div>
+									</div>
+									<div class="text-right">
+										<input type="button" id="SMSaddTemplate" class="btn btn-lg btn-primary" disabled value="Add Template">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jquery lib-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!-- bootstrap4 lib start -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<!-- bootstrap4 lib end -->
+	<!-- perfect-scrollbar plugin-->
+	<script src="js/lib/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script>
+	<!-- Copying text to the clipboard -->
+	<script src="js/lib/clipboard/clipboard.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+	<script src="https://summernote.org/vendors/summernote/dist/summernote-bs4.js"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+	</body>
+	</html>

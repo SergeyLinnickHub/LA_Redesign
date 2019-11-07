@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="UI Theme for Limo Anywhere Admin System">
+	<meta name="author" content="Gentle Code">
+	<title>LA Admim Theme</title>
+	<!-- <link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144"> -->
+	<!-- <link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114"> -->
+	<!-- <link href="img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72"> -->
+	<!-- <link href="img/favicon.57x57.png" rel="apple-touch-icon" type="image/png"> -->
+	<!-- <link href="img/favicon.png" rel="icon" type="image/png"> -->
+	<!-- <link href="img/favicon.ico" rel="shortcut icon"> -->
+	<!-- Google font OpenSans -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<!-- LA Admin Theme core css -->
+	<link href="css/main.css" rel="stylesheet">
+</head>
+<body class="with-side-menu">
+
+	<header class="site-header navbar fixed-top navbar-expand-lg">
+		<a class="navbar-brand" href="index.html" title="Limo Anywhere - a better way to run your business"><img width="48" height="40" src="img/logo-LA-sm-white.png" alt="Limo Anywhere"></a>
+	
+		<div class="sidebar-hamburger-holder mr-auto">
+			<button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
+				<i class="i">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</i>
+			</button>
+		</div>
+	
+		<div class="mobile-menu-right-overlay modal-backdrop show"></div>
+		<div class="navbar-collapse site-header-collapsed" id="mainMenu">
+			<!-- Main menu -->
+			<ul class="main-menu navbar-nav mr-auto ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-briefcase fa-fw"></i>Quotes</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="reservations.html"><i class="fa fa-calendar-check-o fa-fw"></i>Reservations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-car fa-fw"></i>Dispatch</a>
+				</li>
+				<li class="nav-item d-none d-lg-block">
+					<a class="btn btn-primary" href="#">Rate Lookup</a>
+				</li>
+				<li class="nav-item dropdown d-none d-lg-block">
+					<a class="btn btn-primary dropdown-toggle" href="#" id="ddHeaderNewReservation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New Res</a>
+					<div class="dropdown-menu" aria-labelledby="ddHeaderNewReservation">
+						<a class="dropdown-item" href="#">Standard Reservation</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Quick Reservation</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">DA Net Farm-out</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-calendar fa-fw"></i>Calendar</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-usd fa-fw"></i>Settle</a>
+				</li>
+			</ul>
+			<!-- end Main menu -->
+	
+			<ul class="main-menu navbar-nav">
+				<!-- Search form -->
+				<li class="nav-item site-header-search-container">
+					<form class="site-header-search closed">
+						<input class="input-search form-control form-control-rounded" type="search" placeholder="Search" />
+						<button class="btn-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+						<div class="overlay"></div>
+					</form>
+				</li>
+				<!-- end Search form -->
+	
+				<!-- More menu -->
+				<li class="nav-item dropdown dropdown-opened-mobile">
+					<a class="nav-link dropdown-toggle" href="#?" id="ddHeaderMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+					<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="ddHeaderMore">
+						<li class="dropdown-item"><a class="nav-link" href="myOffice.html"><i class="fa fa-home fa-fw"></i>My Office</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="accounts.html"><i class="fa fa-user-plus fa-fw""></i>Accounts</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-share-alt fa-fw"></i>Network</a></li>
+						<li class="dropdown-divider"></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-download fa-fw"></i>Receivables</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-upload fa-fw"></i>Payables</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-line-chart fa-fw"></i>Reports</a></li>
+						<li class="dropdown-divider"></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-check-square fa-fw"></i>Memo</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-files-o fa-fw"></i>Files</a></li>
+						<li class="dropdown-item"><a class="nav-link" href="#"><i class="fa fa-wrench fa-fw"></i>Tools</a></li>
+					</ul>
+				</li>
+				<!-- end More menu -->
+			</ul>
+		</div>
+	
+		<!-- Buttons only mobile screen -->
+		<div class="ml-auto d-block d-lg-none">
+			<a class="btn btn-primary" href="#">Rate</a>
+			<div class="btn-group">
+				<a class="btn btn-primary dropdown-toggle" href="#" id="ddHeaderNewReservation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New Res</a>
+				<div class="dropdown-menu" aria-labelledby="ddHeaderNewReservation">
+					<a class="dropdown-item" href="#">Standard Reservation</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Quick Reservation</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">DA Net Farm-out</a>
+				</div>
+			</div>
+		</div>
+		<!-- end Buttons only mobile screen -->
+	
+		<!-- Admin menu -->
+		<ul class="main-menu navbar-nav main-menu-admin">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="ddUserMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-nostatic" aria-labelledby="ddUserMenu">
+					<a class="dropdown-item" href="#"><i class="fa fa-cog fa-fw"></i>Menu Customization</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-graduation-cap fa-fw"></i>Training</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-bar-chart fa-fw"></i>System Status</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-envelope fa-fw"></i>Email Notifications</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-question-circle fa-fw"></i>Support &amp; Feedback</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+				</div>
+			</li>
+		</ul>
+		<!-- end Admin menu -->
+	
+		<div class="sidebar-hamburger-holder">
+			<button id="show-hide-menu-mob" class="show-hide-menu-mob"><i class="fa fa-th"></i></button>
+		</div>
+	
+	</header>
+
+	<div class="mobile-menu-left-overlay modal-backdrop show"></div>
+	<nav class="side-menu">
+		<ul class="side-menu-list">
+			<li class="with-sub">
+				<span>Pages</span>
+				<ul>
+					<li><a href="index.html"><span class="lbl">Index</span></a></li>
+					<li><a href="accounts.html"><span class="lbl">Accounts</span></a></li>
+					<li><a href="blank.html"><span class="lbl">Blank</span></a></li>
+					<li><a href="iCalendar.html"><span class="lbl">ICalendar</span></a></li>
+					<li class=""><a href="myOffice.html"><span class="lbl">My Office</span></a></li>
+					<li class=""><a href="reservations.html"><span class="lbl">Reservations</span></a></li>
+					<li class=""><a href="reservation_with_submenu.html"><span class="lbl">Reservations (with submenu)</span></a></li>
+					<li class=""><a href="resScreen.html"><span class="lbl">Reservation Screen</span></a></li>
+					<li class=""><a href="scheduledMessaging.html"><span class="lbl">Scheduled Messaging</span></a></li>
+					<li class=""><a href="systemUsers.html"><span class="lbl">System Users</span></a></li>
+					<li class=""><a href="header2.html"><span class="lbl">Alternate Header</span></a></li>
+					<li class="with-sub">
+						<span>Messaging & Template Settings</span>
+						<ul>
+							<li class="with-sub">
+								<span class="lbl">Standart Settings</span>
+								<ul>
+									<li><a href="#?"><span class="lbl">Level 2</span></a></li>
+									<li><a href="#?"><span class="lbl">Level 2</span></a></li>
+								</ul>
+							</li>
+							<li><a href="emailReservationManifest.html"><span class="lbl">Email Res Manifest</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="with-sub">
+				<span>Components</span>
+				<ul>
+					<li><a href="alerts.html"><span class="lbl">Alerts</span></a></li>
+					<li><a href="badges.html"><span class="lbl">Badges</span></a></li>
+					<li><a href="buttons.html"><span class="lbl">Buttons</span></a></li>
+					<li><a href="cards.html"><span class="lbl">Cards</span></a></li>
+					<li><a href="forms.html"><span class="lbl">Forms</span></a></li>
+					<li><a href="modalPage.html"><span class="lbl">Modal page</span></a></li>
+					<li><a href="pagination.html"><span class="lbl">Pagination</span></a></li>
+					<li><a href="pickers.html"><span class="lbl">Pickers</span></a></li>
+					<li><a href="popovers.html"><span class="lbl">Popovers</span></a></li>
+					<li><a href="tables.html"><span class="lbl">Tables</span></a></li>
+					<li><a href="tabs.html"><span class="lbl">Tabs</span></a></li>
+					<li class="with-sub">
+						<span>Nested Menu</span>
+						<ul>
+							<li><a href="#?"><span class="lbl">Level 1</span></a></li>
+							<li class=""><a href="#?"><span class="lbl">Level 1</span></a></li>
+							<li class="with-sub">
+								<span class="lbl">Level 1</span>
+								<ul>
+									<li><a href="#?"><span class="lbl">Level 2</span></a></li>
+									<li><a href="#?"><span class="lbl">Level 2</span></a></li>
+									<li class="with-sub">
+										<span class="lbl">Level 2</span>
+										<ul>
+											<li><a href="#?"><span class="lbl">Level 3</span></a></li>
+											<li><a href="#?"><span class="lbl">Level 3</span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="page-content">
+		<div class="content-wrapper">
+			<header class="header-content"><h1>Buttons</h1></header>
+			<main class="page-content-inner">
+
+				<button type="button" class="btn btn-primary">Primary</button>
+				<button type="button" class="btn btn-secondary">Secondary</button>
+				<button type="button" class="btn btn-success">Success</button>
+				<button type="button" class="btn btn-danger">Danger</button>
+				<button type="button" class="btn btn-warning">Warning</button>
+				<button type="button" class="btn btn-info">Info</button>
+				<button type="button" class="btn btn-light">Light</button>
+				<button type="button" class="btn btn-dark">Dark</button>
+				<button type="button" class="btn btn-link">Link</button>
+				<br><br>
+				<h2>Outline buttons</h2>
+				<button type="button" class="btn btn-outline-primary">Primary</button>
+				<button type="button" class="btn btn-outline-secondary">Secondary</button>
+				<button type="button" class="btn btn-outline-success">Success</button>
+				<button type="button" class="btn btn-outline-danger">Danger</button>
+				<button type="button" class="btn btn-outline-warning">Warning</button>
+				<button type="button" class="btn btn-outline-info">Info</button>
+				<button type="button" class="btn btn-outline-light">Light</button>
+				<button type="button" class="btn btn-outline-dark">Dark</button>
+				<br><br>
+				<h2>Large</h2>
+				<button type="button" class="btn btn-primary btn-lg">Large button</button>
+				<br><br>
+				<h2>Small</h2>
+				<button type="button" class="btn btn-primary btn-sm">Small button</button>
+				<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+				<button type="button" class="btn btn-outline-secondary btn-sm">Small button</button>
+				<br><br>
+				<h2>Block</h2>
+				<button type="button" class="btn btn-primary btn-block">Block button</button>
+				<br>
+				<h2> Button group</h2>
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-primary">Left</button>
+					<button type="button" class="btn btn-primary">Middle</button>
+					<button type="button" class="btn btn-primary">Right</button>
+				</div>
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-secondary">Left</button>
+					<button type="button" class="btn btn-secondary">Middle</button>
+					<button type="button" class="btn btn-secondary">Right</button>
+				</div>
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-outline-secondary">Left</button>
+					<button type="button" class="btn btn-outline-secondary">Middle</button>
+					<button type="button" class="btn btn-outline-secondary">Right</button>
+				</div>
+				<br><br>
+				<h2> Button disabled</h2>
+				<button type="button" class="btn btn-primary" disabled>Primary</button>
+				<button type="button" class="btn btn-secondary" disabled>Secondary</button>
+				<button type="button" class="btn btn-success" disabled>Success</button>
+				<button type="button" class="btn btn-danger" disabled>Danger</button>
+				<button type="button" class="btn btn-warning" disabled>Warning</button>
+				<button type="button" class="btn btn-info" disabled>Info</button>
+				<button type="button" class="btn btn-light" disabled>Light</button>
+				<button type="button" class="btn btn-dark" disabled>Dark</button>
+				<button type="button" class="btn btn-link" disabled>Link</button>
+				<br><br>
+				<h2>Button in two lines</h2>
+				<button type="button" class="btn btn-lg btn-primary btn-two-lines">Save Settings <i>Obtain iCal URL</i></button>
+				<button type="button" class="btn btn-primary btn-two-lines">Save Settings <i>Obtain iCal URL</i></button>
+				<button type="button" class="btn btn-sm btn-primary btn-two-lines">Save Settings <i>Obtain iCal URL</i></button>
+			</main>
+		</div><!--.content-wrapper-->
+	</div><!--.page-content-->
+
+	<!-- jquery lib-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!-- bootstrap4 lib start -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<!-- bootstrap4 lib end -->
+	<!-- perfect-scrollbar plugin-->
+	<script src="js/lib/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script>
+	<!-- Copying text to the clipboard -->
+	<script src="js/lib/clipboard/clipboard.min.js"></script>
+
+<script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>
